@@ -133,18 +133,30 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 import os
 import dj_database_url
+import subprocess
 
-DEBUG = False  # For live site
+DEBUG = False  # Turn off debug for production
 
-ALLOWED_HOSTS = ['*']  # or specific Railway domain
+ALLOWED_HOSTS = ['*']  # You can replace '*' with your Railway domain later
 
+# Database config (for Railway Postgres or fallback to SQLite)
 DATABASES = {
     'default': dj_database_url.config(default='sqlite:///db.sqlite3')
 }
 
+# Where collectstatic should store static files
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-import subprocess
-
+# ✅ Run collectstatic once using env var
 if os.environ.get('RUN_COLLECTSTATIC') == '1':
-    subprocess.run(['python', 'manage.py', 'collectstatic', '--noinput'])
+    try:
+        subprocess.run(['python', 'manage.py', 'collectstatic', '--noinput'], check=True)
+    except subprocess.CalledProcessError:
+        print("collectstatic failed")
+
+# ✅ Run migrate once using env var
+if os.environ.get('RUN_MIGRATE') == '1':
+    try:
+        subprocess.run(['python', 'manage.py', 'migrate'], check=True)
+    except subprocess.CalledProcessError:
+        print("migrate failed")
