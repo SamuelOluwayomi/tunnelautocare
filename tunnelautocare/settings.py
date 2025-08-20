@@ -125,7 +125,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY
 SECRET_KEY = os.environ.get('SECRET_KEY', 'dummy-secret-key-for-dev')
-DEBUG = False
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 ALLOWED_HOSTS = ['*']  # Replace with your Railway URL later
 
 # Database (SQLite fallback)
