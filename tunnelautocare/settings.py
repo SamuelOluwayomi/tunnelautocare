@@ -143,3 +143,8 @@ DATABASES = {
 }
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+import subprocess
+
+if os.environ.get('RUN_COLLECTSTATIC') == '1':
+    subprocess.run(['python', 'manage.py', 'collectstatic', '--noinput'])
