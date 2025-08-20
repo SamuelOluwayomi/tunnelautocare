@@ -147,16 +147,16 @@ DATABASES = {
 # Where collectstatic should store static files
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# ✅ Run collectstatic once using env var
-if os.environ.get('RUN_COLLECTSTATIC') == '1':
-    try:
-        subprocess.run(['python', 'manage.py', 'collectstatic', '--noinput'], check=True)
-    except subprocess.CalledProcessError:
-        print("collectstatic failed")
+if os.environ.get('CREATE_SUPERUSER') == '1':
+    import django
+    django.setup()
+    from django.contrib.auth import get_user_model
 
-# ✅ Run migrate once using env var
-if os.environ.get('RUN_MIGRATE') == '1':
-    try:
-        subprocess.run(['python', 'manage.py', 'migrate'], check=True)
-    except subprocess.CalledProcessError:
-        print("migrate failed")
+    User = get_user_model()
+    username = os.environ.get('DJANGO_SUPERUSER_USERNAME', 'admin')
+    email = os.environ.get('DJANGO_SUPERUSER_EMAIL', 'admin@example.com')
+    password = os.environ.get('DJANGO_SUPERUSER_PASSWORD', 'admin123')
+
+    if not User.objects.filter(username=username).exists():
+        User.objects.create_superuser(username=username, email=email, password=password)
+        print("✅ Superuser created")
