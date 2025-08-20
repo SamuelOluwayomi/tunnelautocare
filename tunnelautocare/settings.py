@@ -117,32 +117,29 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
-
 import os
+from pathlib import Path
 import dj_database_url
-import subprocess
 
-DEBUG = False  # Turn off debug for production
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-ALLOWED_HOSTS = ['*']  # You can replace '*' with your Railway domain later
+# SECURITY
+SECRET_KEY = os.environ.get('SECRET_KEY', 'dummy-secret-key-for-dev')
+DEBUG = False
+ALLOWED_HOSTS = ['*']  # Replace with your Railway URL later
 
-# Database config (for Railway Postgres or fallback to SQLite)
+# Database (SQLite fallback)
 DATABASES = {
-    'default': dj_database_url.config(default='sqlite:///db.sqlite3')
+    'default': dj_database_url.config(
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
+    )
 }
 
-# Where collectstatic should store static files
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# Static files
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'   # Where collectstatic stores files
+STATICFILES_DIRS = [BASE_DIR / 'static']  # Your project-level static folder
+
+# Media files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
