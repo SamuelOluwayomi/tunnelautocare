@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+
+# Django
+db.sqlite3
+media/
+staticfiles/
+.env
+
+# Environments
+venv/
+env/
+*.egg-info/
+
+# VS Code / IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Railway / Heroku
+Procfile
