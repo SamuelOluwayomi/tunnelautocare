@@ -142,9 +142,4 @@ DATABASES = {
     'default': dj_database_url.config(default='sqlite:///db.sqlite3')
 }
 
-MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-    # other middlewares...
-]
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
