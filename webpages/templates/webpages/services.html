@@ -1,0 +1,25 @@
+{% extends 'webpages/base.html' %}
+{% block title %}Our Services{% endblock %}
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our Services</h2>
+      <p class="text-muted">Click on any service to learn more.</p>
+    </div>
+    <div class="row">
+      {% for service in services %}
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">{{ service.title }}</h5>
+              <p class="card-text">{{ service.description|truncatewords:15 }}</p>
+              <a href="{% url 'service_detail' service.slug %}" class="btn btn-sm btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

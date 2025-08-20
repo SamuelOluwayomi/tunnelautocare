@@ -1,0 +1,52 @@
+{% extends 'webpages/base.html' %}
+{% load static %}
+
+{% block title %}Contact Us - Tunnel AutoCare{% endblock %}
+
+{% block content %}
+<section class="contact-section py-5">
+  <div class="overlay"></div>
+  <div class="container position-relative text-white">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Contact Tunnel AutoCare</h2>
+      <p class="text-light">We’re here to help. Reach out to us anytime.</p>
+    </div>
+    <div class="row">
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <form method="post" action="#">
+          {% csrf_token %}
+          <div class="mb-3">
+            <label for="name" class="form-label text-white">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Your name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label text-white">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label text-white">Message</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Your message..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-light">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="col-md-6 mt-5 mt-md-0">
+        <h5 class="fw-bold">Phone</h5>
+        <p>+234 xxx xxx xxxx</p>
+
+        <h5 class="fw-bold">Email</h5>
+        <p>info@tunnelautocare.com</p>
+
+        <h5 class="fw-bold">Address</h5>
+        <p>123 Mechanic Village, Laderin, Oke-Mosan, Abeokuta, Ogun State.</p>
+
+        <h5 class="fw-bold">Opening Hours</h5>
+        <p>Mon – Sat: 8am – 6pm<br>Sun: Closed</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
