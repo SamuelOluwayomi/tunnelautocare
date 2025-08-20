@@ -129,3 +129,21 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+import os
+import dj_database_url
+
+DEBUG = False  # For live site
+
+ALLOWED_HOSTS = ['*']  # or specific Railway domain
+
+DATABASES = {
+    'default': dj_database_url.config(default='sqlite:///db.sqlite3')
+}
+
+MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # other middlewares...
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
