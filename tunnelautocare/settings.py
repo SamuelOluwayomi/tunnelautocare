@@ -144,6 +144,10 @@ STATICFILES_DIRS = [BASE_DIR / 'static']  # Your project-level static folder
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://tunnelautocare.up.railway.app'
+]
+
 if os.environ.get('CREATE_SUPERUSER') == '1':
     import django
     django.setup()
