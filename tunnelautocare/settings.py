@@ -147,23 +147,3 @@ MEDIA_ROOT = BASE_DIR / 'media'
 CSRF_TRUSTED_ORIGINS = [
     'https://tunnelautocare.up.railway.app'
 ]
-
-if os.environ.get('CREATE_SUPERUSER') == '1':
-    import django
-    django.setup()
-    from django.core.management import call_command
-    from django.contrib.auth import get_user_model
-
-    # Run migrations
-    print("📦 Running migrate...")
-    call_command("migrate")
-
-    # Optional: Create superuser
-    User = get_user_model()
-    username = os.environ.get('DJANGO_SUPERUSER_USERNAME', 'admin')
-    email = os.environ.get('DJANGO_SUPERUSER_EMAIL', 'admin@example.com')
-    password = os.environ.get('DJANGO_SUPERUSER_PASSWORD', 'admin123')
-
-    if not User.objects.filter(username=username).exists():
-        User.objects.create_superuser(username=username, email=email, password=password)
-        print("✅ Superuser created")
