@@ -127,7 +127,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY
 SECRET_KEY = os.environ.get('SECRET_KEY', 'dummy-secret-key-for-dev')
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
-ALLOWED_HOSTS = ['tunnelautocare.com', 'www.tunnelautocare.com']
+ALLOWED_HOSTS = ['tunnelautocare.com', 'www.tunnelautocare.com', '127.0.0.1', 'localhost']
 SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_HSTS_SECONDS = 31536000  # 1 year
