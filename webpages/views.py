@@ -36,5 +36,5 @@ def contact_view(request):
     return render(request, 'webpages/contact.html', {'form': form})
 
 def google_verify(request):
-    path = os.path.join(settings.BASE_DIR, 'verification' 'googlee434423ea7ef14a0.html')
+    path = os.path.join(settings.BASE_DIR, 'verification', 'googlee434423ea7ef14a0.html')
     return FileResponse(open(path, 'rb'))
