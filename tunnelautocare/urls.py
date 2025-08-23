@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path, include, reverse
 from django.contrib.sitemaps.views import sitemap
 from django.contrib.sitemaps import Sitemap
+from django.conf import settings
+from django.conf.urls.static import static
 
 class StaticViewSitemap(Sitemap):
     def items(self):
@@ -36,3 +38,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("webpages.urls")),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])

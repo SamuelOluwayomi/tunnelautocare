@@ -437,3 +437,9 @@ body {
         padding: 0.5rem 1rem;
     }
 }
+
+@font-face {
+  font-family: 'YourFont';
+  src: url('/static/webpages/fonts/YourFont.woff2') format('woff2');
+  font-display: swap;
+}
