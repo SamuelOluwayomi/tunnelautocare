@@ -4,7 +4,11 @@
 {% block title %}Contact Us - Tunnel AutoCare{% endblock %}
 
 {% block content %}
-<section class="contact-section py-5">
+<section class="contact-section py-5 position-relative">
+  <picture>
+    <source srcset="{% static 'webpages/images/contact-bg.webp' %}" type="image/webp">
+    <img src="{% static 'webpages/images/contact-bg.jpg' %}" class="position-absolute top-0 start-0 w-100 h-100" alt="Contact Tunnel AutoCare Background" style="object-fit: cover; z-index: -1;">
+  </picture>
   <div class="overlay"></div>
   <div class="container position-relative text-white">
     <div class="text-center mb-5">
@@ -21,7 +25,7 @@
         </form>
 
         {% if messages %}
-          <div class="alert-container" style="position: fixed; top: 20px; right: 20px; z-index: 1050;">
+          <div class="alert-container position-fixed top-0 end-0 p-3" style="z-index: 1050;">
             {% for message in messages %}
               <div class="alert alert-{{ message.tags }} alert-dismissible fade show shadow" role="alert">
                 {{ message }}
@@ -29,7 +33,7 @@
               </div>
             {% endfor %}
           </div>
-      {% endif %}
+        {% endif %}
       </div>
 
       <!-- Contact Details -->
