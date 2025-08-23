@@ -7,11 +7,13 @@
   <div class="carousel-inner">
 
     <!-- Slide 1 -->
-    <div class="carousel-item active">
-      <picture>
-        <source srcset="{% static 'webpages/images/slide1.webp' %}" type="image/webp">
-        <img src="{% static 'webpages/images/slide1.jpg' %}" class="d-block w-100 hero-img" alt="Auto Repair Image 1">
-      </picture>
+    <div class="carousel-item active position-relative">
+      <img src="{% static 'webpages/images/slide1.webp' %}" 
+           srcset="{% static 'webpages/images/slide1.webp' %} 1500w,
+                   {% static 'webpages/images/slide1.webp' %} 750w" 
+           sizes="(max-width: 768px) 100vw, 750px"
+           class="d-block w-100 hero-img" 
+           alt="Auto Repair Image 1">
       <div class="carousel-caption">
         <h1>Experienced Auto Technician in Ogun State</h1>
         <p>Fast, Affordable, and Reliable Repairs</p>
@@ -24,10 +26,12 @@
 
     <!-- Slide 2 -->
     <div class="carousel-item">
-      <picture>
-        <source srcset="{% static 'webpages/images/slide2.webp' %}" type="image/webp">
-        <img src="{% static 'webpages/images/slide2.jpg' %}" class="d-block w-100 hero-img" alt="Auto Repair Image 2">
-      </picture>
+      <img src="{% static 'webpages/images/slide2.webp' %}" 
+           srcset="{% static 'webpages/images/slide2.webp' %} 1498w,
+                   {% static 'webpages/images/slide2.webp' %} 749w" 
+           sizes="(max-width: 768px) 100vw, 749px"
+           class="d-block w-100 hero-img" 
+           alt="Auto Repair Image 2">
       <div class="carousel-caption">
         <h1>Expert Diagnostics</h1>
         <p>We use top-tier tools to identify and fix issues fast.</p>
@@ -40,10 +44,12 @@
 
     <!-- Slide 3 -->
     <div class="carousel-item">
-      <picture>
-        <source srcset="{% static 'webpages/images/slide3.webp' %}" type="image/webp">
-        <img src="{% static 'webpages/images/slide3.jpg' %}" class="d-block w-100 hero-img" alt="Auto Repair Image 3">
-      </picture>
+      <img src="{% static 'webpages/images/slide3.webp' %}" 
+           srcset="{% static 'webpages/images/slide3.webp' %} 1500w,
+                   {% static 'webpages/images/slide3.webp' %} 750w" 
+           sizes="(max-width: 768px) 100vw, 750px"
+           class="d-block w-100 hero-img" 
+           alt="Auto Repair Image 3">
       <div class="carousel-caption">
         <h1>Brake & Suspension Services</h1>
         <p>Keep your car safe and stable on the road.</p>
@@ -76,11 +82,8 @@
     <div class="row g-4">
       <!-- Service Card -->
       <div class="col-md-6">
-        <div class="service-card">
-          <picture>
-            <source srcset="{% static 'webpages/images/image2.webp' %}" type="image/webp">
-            <img src="{% static 'webpages/images/image2.jpg' %}" class="img-fluid" alt="Engine Diagnostics">
-          </picture>
+        <div class="service-card bg-image" 
+             style="background-image: url('{% static 'webpages/images/image2.webp' %}');">
           <div class="overlay text-white text-center p-4">
             <div class="service-caption">
               <h5 class="mb-2">Engine Diagnostics</h5>
@@ -92,11 +95,8 @@
 
       <!-- Service Card -->
       <div class="col-md-6">
-        <div class="service-card">
-          <picture>
-            <source srcset="{% static 'webpages/images/image3.webp' %}" type="image/webp">
-            <img src="{% static 'webpages/images/image3.jpg' %}" class="img-fluid" alt="Brake & Suspension">
-          </picture>
+        <div class="service-card bg-image" 
+             style="background-image: url('{% static 'webpages/images/image3.webp' %}');">
           <div class="overlay text-white text-center p-4">
             <div class="service-caption">
               <h5 class="mb-2">Brake & Suspension</h5>
@@ -108,11 +108,8 @@
 
       <!-- Service Card -->
       <div class="col-md-12">
-        <div class="service-card">
-          <picture>
-            <source srcset="{% static 'webpages/images/image4.webp' %}" type="image/webp">
-            <img src="{% static 'webpages/images/image4.jpg' %}" class="img-fluid" alt="Oil Change">
-          </picture>
+        <div class="service-card bg-image" 
+             style="background-image: url('{% static 'webpages/images/image4.webp' %}');">
           <div class="overlay text-white text-center p-4">
             <div class="service-caption">
               <h5 class="mb-2">Oil Change</h5>
@@ -124,11 +121,8 @@
 
       <!-- Service Card 4 -->
       <div class="col-md-6">
-        <div class="service-card">
-          <picture>
-            <source srcset="{% static 'webpages/images/image5.webp' %}" type="image/webp">
-            <img src="{% static 'webpages/images/image5.jpg' %}" class="img-fluid" alt="Wheel Alignment">
-          </picture>
+        <div class="service-card bg-image" 
+             style="background-image: url('{% static 'webpages/images/image5.webp' %}');">
           <div class="overlay text-white text-center p-4">
             <div class="service-caption">
               <h5 class="mb-2">Wheel Alignment</h5>
@@ -140,11 +134,8 @@
 
       <!-- Service Card 5 -->
       <div class="col-md-6">
-        <div class="service-card">
-          <picture>
-            <source srcset="{% static 'webpages/images/image6.webp' %}" type="image/webp">
-            <img src="{% static 'webpages/images/image6.jpg' %}" class="img-fluid" alt="Battery Replacement">
-          </picture>
+        <div class="service-card bg-image" 
+             style="background-image: url('{% static 'webpages/images/image6.webp' %}');">
           <div class="overlay text-white text-center p-4">
             <div class="service-caption">
               <h5 class="mb-2">Battery Replacement</h5>
@@ -156,11 +147,8 @@
 
       <!-- Service Card 6 -->
       <div class="col-md-12">
-        <div class="service-card">
-          <picture>
-            <source srcset="{% static 'webpages/images/image7.webp' %}" type="image/webp">
-            <img src="{% static 'webpages/images/image7.jpg' %}" class="img-fluid" alt="General Repairs">
-          </picture>
+        <div class="service-card bg-image" 
+             style="background-image: url('{% static 'webpages/images/image7.webp' %}');">
           <div class="overlay text-white text-center p-4">
             <div class="service-caption">
               <h5 class="mb-2">General Repairs</h5>
