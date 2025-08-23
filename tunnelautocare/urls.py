@@ -22,13 +22,12 @@ from django.urls import reverse
 
 class StaticViewSitemap(Sitemap):
     def items(self):
-        # These should match the names you assigned in your url patterns
         return ['home', 'contact']
 
     def location(self, item):
         return reverse(item)
 
-# 2. Register the sitemap
+# Register the sitemap
 sitemaps = {
     'static': StaticViewSitemap,
 }
