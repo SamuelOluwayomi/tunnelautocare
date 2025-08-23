@@ -2,6 +2,9 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Service
 from django.contrib import messages
 from .forms import ContactForm
+from django.http import FileResponse
+import os
+from django.conf import settings
 
 # Create your views here.
 def home(request):
@@ -31,3 +34,7 @@ def contact_view(request):
         form = ContactForm()
 
     return render(request, 'webpages/contact.html', {'form': form})
+
+def google_verify(request):
+    path = os.path.join(settings.BASE_DIR, 'webpages', 'static', 'googlee434423ea7ef14a0.html')
+    return FileResponse(open(path, 'rb'))
