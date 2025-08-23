@@ -16,8 +16,25 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.sitemaps.views import sitemap
+from django.contrib.sitemaps import Sitemap
+from django.urls import reverse
+
+class StaticViewSitemap(Sitemap):
+    def items(self):
+        # These should match the names you assigned in your url patterns
+        return ['home', 'contact']
+
+    def location(self, item):
+        return reverse(item)
+
+# 2. Register the sitemap
+sitemaps = {
+    'static': StaticViewSitemap,
+}
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("webpages.urls")),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
 ]
