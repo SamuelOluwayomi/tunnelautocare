@@ -245,20 +245,6 @@
     }
 }
 
-.map-responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  position: relative;
-  height: 0;
-}
-.map-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-
 #testimonial-slider .card {
   background-color: #ffffff;
   border-radius: 10px;
