@@ -30,7 +30,7 @@
 
   <!-- Preload hero image & font -->
   {% comment %} <link rel="preload" href="{% static 'webpages/images/hero.jpg' %}" as="image"> {% endcomment %}
-  <link rel="preload" href="{% static 'webpages/fonts/YourFont.woff2' %}" as="font" type="font/woff2" crossorigin>
+  {% comment %} <link rel="preload" href="{% static 'webpages/fonts/YourFont.woff2' %}" as="font" type="font/woff2" crossorigin> {% endcomment %}
 
   <!-- External CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -109,6 +109,11 @@
 
     .nav-link:hover::after {
       transform: scaleX(1);
+    }
+
+    .logo-img {
+        width: 100px;
+        height: 54px;
     }
 
     .hero-img {
@@ -268,35 +273,39 @@
 <body>
 <nav class="navbar navbar-expand-lg">
   <div class="container">
-  <a class="navbar-brand" href="{% url 'home' %}">Tunnel AutoCare</a>
-  
-  <!-- Toggle for mobile -->
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-    <i class="bi bi-list custom-toggler-icon"></i>
-  </button>
+    <a class="navbar-brand" href="{% url 'home' %}">
+        <img src="{% static 'webpages/images/image1.svg' %}" alt="Tunnel AutoCare Logo" class="logo-img">
+    </a>
 
-  <div class="collapse navbar-collapse" id="navbarContent">
-    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-      <li class="nav-item me-3"><a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a></li>
-      <li class="nav-item dropdown">
-        <a class="nav-link me-3 dropdown-toggle d-flex align-items-center {% if request.resolver_match.url_name == 'service_detail' %}active{% endif %}" href="#" id="servicesDropdown" data-bs-toggle="dropdown" role="button" aria-expanded="false">
-          Services
-          <i class="bi bi-caret-down-fill ms-1 dropdown-arrow"></i>
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-          <li><a class="dropdown-item" href="{% url 'services' %}"><strong>All Services</strong></a></li>
-          <li><hr class="dropdown-divider"></li>
-          {% for service in services_nav %}
-            <li><a class="dropdown-item" href="{% url 'service_detail' service.slug %}">{{ service.title }}</a></li>
-          {% empty %}
-            <li><a class="dropdown-item disabled">No services yet</a></li>
-          {% endfor %}
-        </ul>
-      </li>
-      <li class="nav-item me-3"><a class="nav-link" href="{% url 'reviews' %}">Testimonials</a></li>
-      <li class="nav-item me-3"><a class="nav-link" href="#faq">FAQ</a></li>
-      <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}" href="{% url 'contact' %}">Contact</a></li>
-    </ul>
+  
+    <!-- Toggle for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="bi bi-list custom-toggler-icon"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item me-3"><a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link me-3 dropdown-toggle d-flex align-items-center {% if request.resolver_match.url_name == 'service_detail' %}active{% endif %}" href="#" id="servicesDropdown" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+            Services
+            <i class="bi bi-caret-down-fill ms-1 dropdown-arrow"></i>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+            <li><a class="dropdown-item" href="{% url 'services' %}"><strong>All Services</strong></a></li>
+            <li><hr class="dropdown-divider"></li>
+            {% for service in services_nav %}
+              <li><a class="dropdown-item" href="{% url 'service_detail' service.slug %}">{{ service.title }}</a></li>
+            {% empty %}
+              <li><a class="dropdown-item disabled">No services yet</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        <li class="nav-item me-3"><a class="nav-link" href="{% url 'reviews' %}">Testimonials</a></li>
+        <li class="nav-item me-3"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}" href="{% url 'contact' %}">Contact</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
