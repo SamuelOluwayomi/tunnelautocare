@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Service
+from .models import Service, Review
 from django.contrib import messages
-from .forms import ContactForm
+from .forms import ContactForm, ReviewForm
 from django.http import FileResponse
 import os
 from django.conf import settings
@@ -38,3 +38,20 @@ def contact_view(request):
 def google_verify(request):
     path = os.path.join(settings.BASE_DIR, 'verification', 'googlee434423ea7ef14a0.html')
     return FileResponse(open(path, 'rb'))
+
+def reviews_page(request):
+    if request.method == "POST":
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Thank you for your review! It will appear once approved.")
+            return redirect("reviews")
+    else:
+        form = ReviewForm()
+
+    approved_reviews = Review.objects.filter(approved=True).order_by('-created_at')
+
+    return render(request, "webpages/reviews.html", {
+        "form": form,
+        "reviews": approved_reviews,
+    })

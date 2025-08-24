@@ -14,7 +14,7 @@
            sizes="(max-width: 768px) 100vw, 750px"
            class="d-block w-100 hero-img" 
            alt="Auto Repair Image 1">
-      <div class="carousel-caption">
+      <div class="carousel-caption"  data-aos="fade-up">
         <h1>Experienced Auto Technician in Ogun State</h1>
         <p>Fast, Affordable, and Reliable Repairs</p>
         <div class="mt-3">
@@ -72,7 +72,7 @@
 </div>
 
 <!-- Services Section -->
-<section class="page-content py-2">
+<section class="page-content py-2"  data-aos="fade-up" data-aos-delay="200">
   <div class="container">
     <h2 class="text-center mb-4">Our Services</h2>
     <p class="lead text-center mb-5">
@@ -162,7 +162,7 @@
   </div>
 </section>
 
-<section class="why-choose py-5">
+<section class="why-choose py-5" data-aos="zoom-in" data-aos-delay="200">
   <div class="container">
     <h2 class="fw-bold text-center">Why Choose Tunnel AutoCare?</h2>
     <p class="text-muted text-center">Your trusted auto repair partner in Ogun State.</p>
@@ -196,7 +196,7 @@
 </section>
 
 <!-- About section -->
-<section id="about" class="py-5 bg-dark text-white">
+<section id="about" class="py-5 bg-dark text-white" data-aos="fade-up" data-aos-delay="300">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6 mb-4 mb-md-0">
@@ -220,17 +220,63 @@
   </div>
 </section>
 
-<section id="testimonials" class="py-5 bg-light">
+<section class="bg-light py-5" id="testimonial-slider" data-aos="fade-left" data-aos-delay="200">
   <div class="container">
     <h2 class="text-center mb-4">What Our Customers Say</h2>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="p-3 bg-white shadow rounded">
-          <p>"Tunnel AutoCare fixed my engine in one day. Honest and professional service!"</p>
-          <p class="fw-bold mb-0">— John A.</p>
-        </div>
+
+    <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        {% for review in reviews|slice:":5" %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <div class="d-flex justify-content-center">
+              <div class="card shadow-sm p-4 border-0" style="max-width: 600px;">
+                <div class="card-body text-center">
+                  <p class="card-text">“{{ review.message }}”</p>
+                  <div class="text-warning mb-2">
+                    {% for i in "12345"|slice:":review.rating"|make_list %}
+                      <i class="bi bi-star-fill"></i>
+                    {% endfor %}
+                  </div>
+                  <h6 class="fw-bold">– {{ review.fullname }}</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% empty %}
+          <div class="carousel-item active">
+            <p class="text-center">No reviews available yet.</p>
+          </div>
+        {% endfor %}
       </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
+
+    <div class="text-center mt-4">
+      <a href="{% url 'reviews' %}" class="btn btn-outline-primary">Read More Reviews</a>
+    </div>
+  </div>
+</section>
+
+<section class="container my-5" id="location">
+  <h2 class="text-center mb-4">Find Us</h2>
+  <div class="d-flex justify-content-center">
+    <div class="map-responsive">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.0916344465063!2d3.3869811750455816!3d7.1153790928882525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103a4b001c707f39%3A0x92ba879a8d56c084!2sTunnel%20Autocare%20Company!5e0!3m2!1sen!2sng!4v1756041823263!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <div class="text-center mt-3">
+    <a href="https://www.google.com/maps/dir/?api=1&destination=Plot B, Tunnel Autocare Company, Mechanic Village, Kobape Rd, Oke Mosan, Abeokuta 110118, Ogun State" 
+      target="_blank" class="btn btn-primary">
+      Get Directions
+    </a>
   </div>
 </section>
 

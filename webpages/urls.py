@@ -10,4 +10,5 @@ urlpatterns = [
     path('contact/', views.contact_view, name="contact"),
     path('services/', views.services_page, name='services'),
     path('googlee434423ea7ef14a0.html', google_verify),
+    path("reviews/", views.reviews_page, name="reviews"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

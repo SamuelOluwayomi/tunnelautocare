@@ -6,8 +6,8 @@
 {% block content %}
 <section class="contact-section py-5 position-relative">
   <picture>
-    <source srcset="{% static 'webpages/images/contact-bg.webp' %}" type="image/webp">
-    <img src="{% static 'webpages/images/contact-bg.jpg' %}" class="position-absolute top-0 start-0 w-100 h-100" alt="Contact Tunnel AutoCare Background" style="object-fit: cover; z-index: -1;">
+    <source srcset="{% static 'webpages/images/image1.webp' %}" type="image/webp">
+    <img src="{% static 'webpages/images/image1.jpg' %}" class="position-absolute top-0 start-0 w-100 h-100" alt="Contact Tunnel AutoCare Background" style="object-fit: cover; z-index: -1;">
   </picture>
   <div class="overlay"></div>
   <div class="container position-relative text-white">
@@ -39,17 +39,32 @@
       <!-- Contact Details -->
       <div class="col-md-6 mt-5 mt-md-0">
         <h5 class="fw-bold">Phone</h5>
-        <p>+234 xxx xxx xxxx</p>
+        <p>+234 805 656 5755</p>
 
         <h5 class="fw-bold">Email</h5>
         <p>info@tunnelautocare.com</p>
 
         <h5 class="fw-bold">Address</h5>
-        <p>123 Mechanic Village, Laderin, Oke-Mosan, Abeokuta, Ogun State.</p>
+        <p>Plot B, Tunnel Autocare Company, Mechanic Village, Kobape Rd, Oke Mosan, Abeokuta 110118, Ogun State</p>
 
         <h5 class="fw-bold">Opening Hours</h5>
         <p>Mon – Sat: 8am – 6pm<br>Sun: Closed</p>
       </div>
+
+      <section class="container my-5" id="location">
+        <h2 class="text-center mb-4">Find Us</h2>
+        <div class="d-flex justify-content-center">
+          <div class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.0916344465063!2d3.3869811750455816!3d7.1153790928882525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103a4b001c707f39%3A0x92ba879a8d56c084!2sTunnel%20Autocare%20Company!5e0!3m2!1sen!2sng!4v1756041823263!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Plot B, Tunnel Autocare Company, Mechanic Village, Kobape Rd, Oke Mosan, Abeokuta 110118, Ogun State" 
+            target="_blank" class="btn btn-primary">
+            Get Directions
+          </a>
+        </div>
+      </section>
     </div>
   </div>
 </section>
@@ -62,7 +77,7 @@
       const fade = new bootstrap.Alert(alert);
       fade.close();
     });
-  }, 4000); // 4 seconds
+  }, 4000);
 </script>
 
 {% endblock %}

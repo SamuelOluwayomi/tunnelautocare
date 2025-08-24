@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
+from django.utils import timezone
 
 class Service(models.Model):
     title = models.CharField(max_length=100)
@@ -22,4 +23,14 @@ class ContactMessage(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.name} - {self.email}"
+        return f"{self.fullname} ({self.created_at.strftime('%Y-%m-%d')})"
+    
+class Review(models.Model):
+    fullname = models.CharField(max_length=100)
+    message = models.TextField()
+    rating = models.PositiveIntegerField(default=5)  # 1–5 stars
+    created_at = models.DateTimeField(default=timezone.now)
+    approved = models.BooleanField(default=False)  # Admin approval
+
+    def __str__(self):
+        return f"{self.fullname} ({self.rating}★)"

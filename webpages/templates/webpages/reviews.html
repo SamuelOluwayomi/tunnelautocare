@@ -1,0 +1,93 @@
+{% extends 'webpages/base.html' %}
+
+{% block content %}
+<section class="bg-light py-5" id="reviews-page">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold position-relative" data-aos="fade-down">
+      What Our Clients Say
+    </h2>
+    <p class="text-center text-muted mb-5" data-aos="fade-up">
+      Real feedback from customers who trusted Tunnel AutoCare with their vehicles.
+    </p>
+
+    <!-- Success Message -->
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert" data-aos="fade-in">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    <div class="row g-5">
+      <!-- Review Form -->
+      <div class="col-md-5" data-aos="fade-right">
+        <div class="p-4 bg-white shadow rounded">
+          <h4 class="mb-3">Leave a Review</h4>
+          <form method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+              {{ form.fullname.label_tag }} {{ form.fullname }}
+            </div>
+
+            <!-- Star Rating Input -->
+            <div class="mb-3">
+                <label for="id_rating">Rating:</label>
+                <div class="star-rating d-flex flex-row-reverse justify-content-end">
+                    {% for i in "54321" %}
+                    <input type="radio" id="star{{ i }}" name="rating" value="{{ i }}">
+                    <label for="star{{ i }}" title="{{ i }} star">
+                        <i class="bi bi-star-fill"></i>
+                    </label>
+                    {% endfor %}
+                </div>
+            </div>
+
+
+            <div class="mb-3">
+              {{ form.message.label_tag }} {{ form.message }}
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit Review</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Review Cards -->
+      <div class="col-md-7">
+        <div class="row g-4">
+          {% for review in reviews %}
+            <div class="col-12" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:'1' }}00">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="avatar-circle bg-primary text-white rounded-circle d-flex justify-content-center align-items-center">
+                      {{ review.fullname|slice:":1" }}
+                    </div>
+                    <div class="ms-3">
+                      <h6 class="mb-0">{{ review.fullname }}</h6>
+                      <small class="text-muted">{{ review.created_at|date:"F d, Y" }}</small>
+                    </div>
+                  </div>
+                  <p class="mb-2">“{{ review.message }}”</p>
+                  <div class="text-warning">
+                    {% for i in "12345"|make_list %}
+                      {% if forloop.counter <= review.rating %}
+                        <i class="bi bi-star-fill"></i>
+                      {% else %}
+                        <i class="bi bi-star"></i>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% empty %}
+            <p>No reviews yet. Be the first to write one!</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

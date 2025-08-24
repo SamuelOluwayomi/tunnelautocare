@@ -240,6 +240,76 @@
     }
 }
 
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  position: relative;
+  height: 0;
+}
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+#testimonial-slider .card {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+/* Avatar initials */
+.avatar-circle {
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #0d6efd;
+  color: white;
+}
+
+/* Underline for reviews section title */
+#reviews-page h2::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background: #0d6efd;
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Hover effect on review cards */
+#reviews-page .card {
+  transition: transform 0.3s ease;
+}
+#reviews-page .card:hover {
+  transform: translateY(-5px);
+}
+
+/* Interactive star input styles */
+.star-rating {
+  direction: rtl;
+  font-size: 2rem;
+}
+
+.star-rating input[type="radio"] {
+  display: none;
+}
+
+.star-rating label {
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star-rating input[type="radio"]:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #ffc107;
+}
+
 @font-face {
   font-family: 'YourFont';
   src: url('/static/webpages/fonts/YourFont.woff2') format('woff2');
