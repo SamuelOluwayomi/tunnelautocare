@@ -29,7 +29,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="{% static 'webpages/apple-touch-icon.png' %}">
 
   <!-- Preload hero image & font -->
-  <link rel="preload" href="{% static 'webpages/images/hero.jpg' %}" as="image">
+  {% comment %} <link rel="preload" href="{% static 'webpages/images/hero.jpg' %}" as="image"> {% endcomment %}
   <link rel="preload" href="{% static 'webpages/fonts/YourFont.woff2' %}" as="font" type="font/woff2" crossorigin>
 
   <!-- External CSS -->
@@ -46,6 +46,7 @@
       font-family: 'Georgia', sans-serif;
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
 
     .navbar {
@@ -112,7 +113,7 @@
 
     .hero-img {
       height: 500px;
-      width: 100vw;
+      width: 100%;
       object-fit: cover;
       display: block;
       margin: 0;
@@ -259,6 +260,7 @@
       color: white; 
       border: none;
     }
+
   </style>
 </head>
 

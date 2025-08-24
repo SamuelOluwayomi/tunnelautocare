@@ -226,6 +226,9 @@
 }
 
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
     .carousel-caption h1 {
         font-size: 2rem;
     }
