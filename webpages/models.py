@@ -23,7 +23,7 @@ class ContactMessage(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.fullname} ({self.created_at.strftime('%Y-%m-%d')})"
+        return f"{self.name} ({self.created_at.strftime('%Y-%m-%d')})"
     
 class Review(models.Model):
     fullname = models.CharField(max_length=100)
