@@ -1,3 +1,6 @@
+from django.core.management import call_command
+call_command("migrate", interactive=False)
+
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Service, Review
 from django.contrib import messages
