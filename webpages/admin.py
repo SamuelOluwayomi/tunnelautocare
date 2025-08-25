@@ -5,6 +5,7 @@ from .models import Service, ContactMessage, Review
 class ServiceAdmin(admin.ModelAdmin):
     list_display = ['title', 'slug']
     prepopulated_fields = {'slug': ('title',)}
+    fields = ('title', 'description', 'detailed_description', 'features', 'icon', 'image', 'slug')
 
 @admin.register(ContactMessage)
 class ContactMessageAdmin(admin.ModelAdmin):

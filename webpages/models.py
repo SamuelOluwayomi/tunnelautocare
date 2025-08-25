@@ -4,14 +4,20 @@ from django.utils import timezone
 
 class Service(models.Model):
     title = models.CharField(max_length=100)
-    description = models.TextField()
+    description = models.TextField()  # Short description (used on service list page)
+    detailed_description = models.TextField(blank=True, null=True)  # For service detail page
+    features = models.TextField(blank=True, null=True)  # Optional: Comma-separated bullet points
     image = models.ImageField(upload_to='services/', blank=True, null=True)
+    icon = models.CharField(max_length=100, blank=True, null=True)  # e.g. Bootstrap icon name like 'bi-gear-fill'
     slug = models.SlugField(unique=True, blank=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.title)
         super().save(*args, **kwargs)
+
+    def feature_list(self):
+        return [f.strip() for f in self.features.split(',')] if self.features else []
 
     def __str__(self):
         return self.title

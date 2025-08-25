@@ -13,20 +13,20 @@
     <!-- Services Grid -->
     <div class="row g-4">
       {% for service in services %}
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm services-card" 
-             style="overflow: hidden; transition: transform 0.3s, box-shadow 0.3s;">
-          <div class="card-body text-center">
-            <!-- Optional icon (replace with actual icons) -->
-            <div class="icon-box mb-3">
-              <i class="bi bi-gear-fill fs-1 text-primary"></i>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm services-card p-3">
+            <div class="text-center mb-3">
+              {% if service.icon %}
+                <i class="bi {{ service.icon }} fs-1 text-primary"></i>
+              {% endif %}
             </div>
-            <h5 class="card-title fw-bold">{{ service.title }}</h5>
-            <p class="card-text text-muted">{{ service.description|truncatewords:15 }}</p>
-            <a href="{% url 'service_detail' service.slug %}" class="btn btn-primary btn-sm">Read More</a>
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">{{ service.title }}</h5>
+              <p class="card-text text-muted">{{ service.description|truncatewords:15 }}</p>
+              <a href="{% url 'service_detail' service.slug %}" class="btn btn-sm btn-primary">Read More</a>
+            </div>
           </div>
         </div>
-      </div>
       {% endfor %}
     </div>
 
