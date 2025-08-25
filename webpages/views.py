@@ -11,7 +11,9 @@ from django.conf import settings
 
 # Create your views here.
 def home(request):
-    return render(request, "webpages/home.html", {})
+    reviews = Review.objects.filter(approved=True).order_by('-created_at')[:5]
+    return render(request, 'webpages/home.html', {'reviews': reviews})
+    # return render(request, "webpages/home.html", {})
 
 def services(request):
     return render(request,"webpages/services.html", {})
