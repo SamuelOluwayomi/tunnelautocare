@@ -1,0 +1,1030 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "webpages",
+    "model": "service"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "webpages",
+    "model": "contactmessage"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "webpages",
+    "model": "review"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "1ly9ss4gmp9pu2wx515a5dri3nr7eq29",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-PKINJT1nsNb2mgSQLeVTRdwdIqWA9s3M21TgdRnCOssUxqwuyqrT7xY5PaXuID-43ptOrS7TGPWu6IPO-tayvK6H-3cw8Dx869JL8REgzyiGXB-RnM3WmU4AeDiBL6YjJHAiT9nazsQz9YKYGer9Ac1ANzo:1uohps:wI4D2vh_NXVq4UKsH0L-Hk0zlfPkASvNdaA3T7Af-0Y",
+    "expire_date": "2025-09-03T12:22:36.536Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "d3f31ddq4feyrraeexbe2oj8j3u5mlgb",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGlneRf5R0nMGa-114gCypTipEHcnkVKQYpp5b-YjAq1LCWvPc5hY3ASIy38XKb1y3QE_qY5NplaXeYpyV-RBu3w0zu_74Z4OCvWyraP1iQ3ZmPBKjrUnj-gA0KPGuEV5AAYYSKmkBme1Q0BlwRpCMll8f8YgNpY:1uqVLG:SficmKJ2oVvcx7vkHh2siQ43uaP3KYh5Q-L_RLNDNsE",
+    "expire_date": "2025-09-08T11:26:26.611Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "jknavsiv03yom1d64dbcqvty5jcx7fcl",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGlneRf5R0nMGa-114gCypTipEHcnkVKQYpp5b-YjAq1LCWvPc5hY3ASIy38XKb1y3QE_qY5NplaXeYpyV-RBu3w0zu_74Z4OCvWyraP1iQ3ZmPBKjrUnj-gA0KPGuEV5AAYYSKmkBme1Q0BlwRpCMll8f8YgNpY:1uqEOP:uYtwaqKwoO3kk2J9uTe9CJEU-rHb51UzHXD3x2X4HNM",
+    "expire_date": "2025-09-07T17:20:33.893Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "nwwaukdkqqtrhactxxfbt3jyh9o13n2t",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGlneRf5R0nMGa-114gCypTipEHcnkVKQYpp5b-YjAq1LCWvPc5hY3ASIy38XKb1y3QE_qY5NplaXeYpyV-RBu3w0zu_74Z4OCvWyraP1iQ3ZmPBKjrUnj-gA0KPGuEV5AAYYSKmkBme1Q0BlwRpCMll8f8YgNpY:1upDVc:gLOeQ0dbKiBXQeGIocn2WAuHW3Oew8Y1fklgMyh7-rI",
+    "expire_date": "2025-09-04T22:11:48.846Z"
+  }
+},
+{
+  "model": "webpages.service",
+  "pk": 1,
+  "fields": {
+    "title": "Engine Repair",
+    "description": "We diagnose and repair all kinds of engine issues using modern diagnostic tools and years of expertise.",
+    "detailed_description": "Whether it’s knocking sounds, smoke, or misfiring — we run diagnostics and perform expert repairs to restore engine performance.",
+    "features": "\"Engine diagnostics and scans\",\r\n  \"Oil leak repair\",\r\n  \"Piston and gasket replacement\",\r\n  \"Overheating solutions\",\r\n  \"Full engine rebuilds available\"",
+    "image": "services/image1.jpg",
+    "icon": "bi-gear-fill",
+    "slug": "engine-repair"
+  }
+},
+{
+  "model": "webpages.service",
+  "pk": 2,
+  "fields": {
+    "title": "Oil Change",
+    "description": "Protect your engine with our quality oil change service. We use premium lubricants to keep your vehicle running smoothly.",
+    "detailed_description": "Regular oil changes protect your engine and improve mileage. We offer fast, clean oil changes with premium products.",
+    "features": "\"Synthetic and conventional oils\",\r\n  \"Oil filter replacement\",\r\n  \"Engine inspection included\",\r\n  \"Top-up of key fluids\",\r\n  \"Quick 30-minute service\"",
+    "image": "services/image4.jpg",
+    "icon": "bi-droplet-fill",
+    "slug": "oil-change"
+  }
+},
+{
+  "model": "webpages.service",
+  "pk": 3,
+  "fields": {
+    "title": "Brake Service",
+    "description": "Safe braking starts with expert inspection and maintenance.",
+    "detailed_description": "Squeaky brakes? Soft pedal? We inspect and service your braking system so you can drive with confidence.",
+    "features": "\"Brake pad and disc replacement\",\r\n  \"Brake fluid top-up or flush\",\r\n  \"Emergency brake adjustment\",\r\n  \"ABS diagnostics\",\r\n  \"Noise and vibration check\"",
+    "image": "services/image3.jpg",
+    "icon": "bi-exclamation-triangle-fill",
+    "slug": "brake-service"
+  }
+},
+{
+  "model": "webpages.service",
+  "pk": 4,
+  "fields": {
+    "title": "Wheel Alignment",
+    "description": "Proper wheel alignment helps your tires last longer and improves fuel efficiency. We’ve got the tools to do it right.",
+    "detailed_description": "Misaligned wheels can damage tires and reduce fuel efficiency. We use accurate equipment to realign your wheels for a smoother, safer ride.",
+    "features": "\"Computerized wheel alignment\",\r\n  \"Camber, toe & caster adjustment\",\r\n  \"Steering inspection\",\r\n  \"Improved fuel efficiency\",\r\n  \"Better tire lifespan\"",
+    "image": "services/image5.jpg",
+    "icon": "bi-compass",
+    "slug": "wheel-alignment"
+  }
+},
+{
+  "model": "webpages.service",
+  "pk": 5,
+  "fields": {
+    "title": "Battery Replacement",
+    "description": "Quick and reliable battery testing and replacement for all vehicle models.",
+    "detailed_description": "Is your car slow to start or randomly shutting off? Our team checks and replaces weak batteries with durable, high-performance options.",
+    "features": "\"Free battery health check\",\r\n  \"Top-brand batteries available\",\r\n  \"Safe disposal of old batteries\",\r\n  \"12-month warranty included\",\r\n  \"On-site or in-shop service\"",
+    "image": "services/image6.jpg",
+    "icon": "bi-battery-charging",
+    "slug": "battery-replacement"
+  }
+},
+{
+  "model": "webpages.service",
+  "pk": 6,
+  "fields": {
+    "title": "Car AC Repair",
+    "description": "Stay cool. We diagnose and fix air conditioning issues to keep your ride comfortable.",
+    "detailed_description": "Get your cool back. We inspect and repair car AC systems to keep your cabin comfortable. From gas top-up to compressor issues, we fix it all.",
+    "features": "\"AC gas recharge and leak test\",\r\n  \"Compressor and condenser inspection\",\r\n  \"Cooling performance check\",\r\n  \"Fan and blower motor replacement\",\r\n  \"Cabin air filter cleaning\"",
+    "image": "services/slide3.jpg",
+    "icon": "bi-snow",
+    "slug": "car-ac-repair"
+  }
+},
+{
+  "model": "webpages.review",
+  "pk": 1,
+  "fields": {
+    "fullname": "Samuel O.",
+    "message": "Testing the review carousel",
+    "rating": 5,
+    "created_at": "2025-08-25T11:26:08Z",
+    "approved": true
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add service",
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "codename": "add_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change service",
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "codename": "change_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete service",
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "codename": "delete_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view service",
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "codename": "view_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add contact message",
+    "content_type": [
+      "webpages",
+      "contactmessage"
+    ],
+    "codename": "add_contactmessage"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change contact message",
+    "content_type": [
+      "webpages",
+      "contactmessage"
+    ],
+    "codename": "change_contactmessage"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete contact message",
+    "content_type": [
+      "webpages",
+      "contactmessage"
+    ],
+    "codename": "delete_contactmessage"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view contact message",
+    "content_type": [
+      "webpages",
+      "contactmessage"
+    ],
+    "codename": "view_contactmessage"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add review",
+    "content_type": [
+      "webpages",
+      "review"
+    ],
+    "codename": "add_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change review",
+    "content_type": [
+      "webpages",
+      "review"
+    ],
+    "codename": "change_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete review",
+    "content_type": [
+      "webpages",
+      "review"
+    ],
+    "codename": "delete_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view review",
+    "content_type": [
+      "webpages",
+      "review"
+    ],
+    "codename": "view_review"
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$yuj1q91ThswbqjFBwUHmt0$3rhPbd5e3Y5T2dlk2yOHUPfZvLPoNODrgHNjcpL3vK8=",
+    "last_login": "2025-08-25T11:26:26.580Z",
+    "is_superuser": true,
+    "username": "Tunde",
+    "first_name": "",
+    "last_name": "",
+    "email": "info@tunnelautocare.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-08-20T12:21:19.843Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$NzuqHXGvngZr3KUgzCNLUI$fcu0o3vkFke6LEhK3/ef+nmHOCkyTq6+7ZWfgchlPb8=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "ADMIN",
+    "first_name": "",
+    "last_name": "",
+    "email": "samuelfaith500@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-08-20T19:53:55.033Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-08-20T12:25:12.869Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "object_id": "1",
+    "object_repr": "Engine Repair",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-08-20T12:25:45.224Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "object_id": "2",
+    "object_repr": "Oil Change",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-08-20T12:27:01.663Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "object_id": "3",
+    "object_repr": "Brake Service",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-08-20T12:27:29.573Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "object_id": "4",
+    "object_repr": "Wheel Alignment",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-08-20T12:28:10.515Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "object_id": "5",
+    "object_repr": "Battery Replacement",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-08-20T12:28:48.031Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "object_id": "6",
+    "object_repr": "Car AC Repair",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-08-21T22:19:40.387Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "contactmessage"
+    ],
+    "object_id": "2",
+    "object_repr": "Samuel Oluwayomi - sammy@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-08-21T22:19:40.387Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "contactmessage"
+    ],
+    "object_id": "1",
+    "object_repr": "Samuel Oluwayomi - sammy@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-08-25T11:26:42.319Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "review"
+    ],
+    "object_id": "1",
+    "object_repr": "Samuel O. (1★)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Approved\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-08-25T11:27:02.366Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "review"
+    ],
+    "object_id": "1",
+    "object_repr": "Samuel O. (5★)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Rating\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-08-25T17:26:52.891Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "object_id": "6",
+    "object_repr": "Car AC Repair",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Detailed description\", \"Features\", \"Icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-08-25T17:28:17.382Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "object_id": "5",
+    "object_repr": "Battery Replacement",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Detailed description\", \"Features\", \"Icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-08-25T17:29:21.434Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "object_id": "4",
+    "object_repr": "Wheel Alignment",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Detailed description\", \"Features\", \"Icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-08-25T17:30:44.538Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "object_id": "3",
+    "object_repr": "Brake Service",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Detailed description\", \"Features\", \"Icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-08-25T17:31:01.750Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "object_id": "4",
+    "object_repr": "Wheel Alignment",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-08-25T17:31:46.812Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "object_id": "2",
+    "object_repr": "Oil Change",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Detailed description\", \"Features\", \"Icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-08-25T17:32:28.534Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "object_id": "1",
+    "object_repr": "Engine Repair",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Detailed description\", \"Features\", \"Icon\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-08-25T17:33:18.231Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "object_id": "6",
+    "object_repr": "Car AC Repair",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-08-25T17:33:31.108Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "object_id": "5",
+    "object_repr": "Battery Replacement",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-08-25T17:34:07.122Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "object_id": "4",
+    "object_repr": "Wheel Alignment",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-08-25T17:34:22.365Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "object_id": "3",
+    "object_repr": "Brake Service",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-08-25T17:35:00.731Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "object_id": "2",
+    "object_repr": "Oil Change",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-08-25T17:35:12.838Z",
+    "user": [
+      "Tunde"
+    ],
+    "content_type": [
+      "webpages",
+      "service"
+    ],
+    "object_id": "1",
+    "object_repr": "Engine Repair",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Features\"]}}]"
+  }
+}
+]
