@@ -311,30 +311,29 @@
     background-color: #f8f9fa;
 }
 
-.service-card {
+.service-cards {
     background-color: #ffffff;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-card:hover {
+.service-cards:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(0,0,0,0.2);
 }
 
 .icon-box {
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    border-radius: 50%;
-    background-color: #e6f2ff;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background-color: #e0f0ff;
 }
 
-.service-card:hover .icon-box {
+.service-cards:hover .icon-box {
     background-color: #007bff;
     transform: scale(1.1);
 }
@@ -344,7 +343,7 @@
     transition: color 0.3s ease;
 }
 
-.service-card:hover .icon-box i {
+.service-cards:hover .icon-box i {
     color: #ffffff;
 }
 

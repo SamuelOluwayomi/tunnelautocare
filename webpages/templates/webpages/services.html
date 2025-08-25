@@ -1,10 +1,10 @@
 {% extends 'webpages/base.html' %}
 {% block title %}Our Services{% endblock %}
-
 {% block content %}
-<section class="services-section py-5">
+
+<section class="py-5" style="background-color: #f8f9fa;" data-aos="fade-up">
   <div class="container">
-    <!-- Section Header -->
+    <!-- Section header -->
     <div class="text-center mb-5">
       <h2 class="fw-bold">Our Services</h2>
       <p class="text-muted">Click on any service to learn more.</p>
@@ -14,20 +14,30 @@
     <div class="row g-4">
       {% for service in services %}
       <div class="col-md-4">
-        <div class="service-card h-100 text-center p-4 shadow-sm">
-          <!-- Icon -->
-          <div class="icon-box mb-3">
-            <i class="{{ service.icon_class }} fs-1 text-primary"></i>
+        <div class="card h-100 shadow-sm services-card" 
+             style="overflow: hidden; transition: transform 0.3s, box-shadow 0.3s;">
+          <div class="card-body text-center">
+            <!-- Optional icon (replace with actual icons) -->
+            <div class="icon-box mb-3">
+              <i class="bi bi-gear-fill fs-1 text-primary"></i>
+            </div>
+            <h5 class="card-title fw-bold">{{ service.title }}</h5>
+            <p class="card-text text-muted">{{ service.description|truncatewords:15 }}</p>
+            <a href="{% url 'service_detail' service.slug %}" class="btn btn-primary btn-sm">Read More</a>
           </div>
-          <!-- Title & Description -->
-          <h5 class="fw-bold">{{ service.title }}</h5>
-          <p class="text-muted">{{ service.description|truncatewords:15 }}</p>
-          <!-- Read More Button -->
-          <a href="{% url 'service_detail' service.slug %}" class="btn btn-sm btn-primary mt-2">Read More</a>
         </div>
       </div>
       {% endfor %}
     </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#highlightedServices" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#highlightedServices" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
   </div>
 </section>
+
 {% endblock %}
