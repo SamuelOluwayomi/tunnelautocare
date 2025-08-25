@@ -1,23 +1,31 @@
 {% extends 'webpages/base.html' %}
 {% block title %}Our Services{% endblock %}
+
 {% block content %}
-<section class="py-5">
+<section class="services-section py-5">
   <div class="container">
+    <!-- Section Header -->
     <div class="text-center mb-5">
       <h2 class="fw-bold">Our Services</h2>
       <p class="text-muted">Click on any service to learn more.</p>
     </div>
-    <div class="row">
+
+    <!-- Services Grid -->
+    <div class="row g-4">
       {% for service in services %}
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">{{ service.title }}</h5>
-              <p class="card-text">{{ service.description|truncatewords:15 }}</p>
-              <a href="{% url 'service_detail' service.slug %}" class="btn btn-sm btn-primary">Read More</a>
-            </div>
+      <div class="col-md-4">
+        <div class="service-card h-100 text-center p-4 shadow-sm">
+          <!-- Icon -->
+          <div class="icon-box mb-3">
+            <i class="{{ service.icon_class }} fs-1 text-primary"></i>
           </div>
+          <!-- Title & Description -->
+          <h5 class="fw-bold">{{ service.title }}</h5>
+          <p class="text-muted">{{ service.description|truncatewords:15 }}</p>
+          <!-- Read More Button -->
+          <a href="{% url 'service_detail' service.slug %}" class="btn btn-sm btn-primary mt-2">Read More</a>
         </div>
+      </div>
       {% endfor %}
     </div>
   </div>

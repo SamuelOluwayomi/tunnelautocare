@@ -306,3 +306,45 @@
   src: url('/static/webpages/fonts/YourFont.woff2') format('woff2');
   font-display: swap;
 }
+
+.services-section {
+    background-color: #f8f9fa;
+}
+
+.service-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.icon-box {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #e6f2ff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-card:hover .icon-box {
+    background-color: #007bff;
+    transform: scale(1.1);
+}
+
+.icon-box i {
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.service-card:hover .icon-box i {
+    color: #ffffff;
+}
+
