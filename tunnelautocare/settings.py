@@ -17,7 +17,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'dummy-secret-key-for-dev')
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'  # Change to 'False' on production
 
 # Hosts allowed to serve the site
-ALLOWED_HOSTS = ['tunnelautocare.com', 'www.tunnelautocare.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['tunnelautocare.com', 'www.tunnelautocare.com','tunnelautocare.up.railway.app', '127.0.0.1', 'localhost']
 
 # Force HTTPS only in production
 SECURE_SSL_REDIRECT = not DEBUG
